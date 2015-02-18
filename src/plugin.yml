@@ -1,0 +1,18 @@
+name: SevsWarden
+main: be.seveningful.sw.SevsWarden
+version: SNAP_1a25b
+author: Seveningful
+depend:
+  - ProtocolLib
+description: 'Le Warden de Seveningful'
+
+permissions:
+   sw.immune:
+     description: Bypass anti-cheat
+     permission: sw.immune
+     
+
+commands:
+  sw:
+    usage: /sw
+    description: 'summon a fake player'
