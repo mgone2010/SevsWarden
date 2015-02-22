@@ -1,6 +1,6 @@
 name: SevsWarden
 main: be.seveningful.sw.SevsWarden
-version: SNAP_1a25b
+version: SNAP_1a27b
 author: Seveningful
 depend:
   - ProtocolLib
