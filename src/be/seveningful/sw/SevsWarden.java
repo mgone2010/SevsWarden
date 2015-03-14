@@ -248,10 +248,14 @@ public class SevsWarden extends JavaPlugin{
 	@Override
 	public boolean onCommand(CommandSender sender, Command command,
 			String label, String[] args) {
+		
 		final Player p = (Player) sender;
 		
 		if(command.getName().equalsIgnoreCase("sw")){
-			if(args[0].equalsIgnoreCase("ff")){
+			if(args.length == 0 || args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("?")){
+				Messages.sendMessage(p, "help");
+			}else
+			if(args[0].equalsIgnoreCase("ff") &&  p.hasPermission("sw.check.forcefield")){
 				if(args.length == 2){
 					try {
 						
@@ -380,7 +384,7 @@ public class SevsWarden extends JavaPlugin{
 				}
 			return true;
 				
-			}else if(args[0].equalsIgnoreCase("reset")){
+			}else if(args[0].equalsIgnoreCase("reset") && p.hasPermission("sw.reset")){
 				if(args.length >=2){
 					
 					Player pl = Bukkit.getPlayerExact(args[1]);
@@ -414,10 +418,7 @@ public class SevsWarden extends JavaPlugin{
 					}
 					}
 				
-			}else
-				p.sendMessage(ChatColor.RED + "Il vous manque des arguments !");
-				return true;
-			
+			}
 		}
 		
 		return false;

@@ -102,7 +102,7 @@ public class EventsClass implements Listener {
 
 							}
 						}.runTaskLater(plugin, 20 * 10);
-					} else if (e.getTo().getY() - e.getFrom().getY() >= 0.9
+					} else if ((e.getTo().getY() - e.getFrom().getY()  == 1.0 /*WeepCraft & Nodus*/ ||( e.getTo().getY() - e.getFrom().getY()  >= 0.7499 && e.getTo().getY() - e.getFrom().getY() <= 0.75)  /*Huzuni*/)
 							&& !immunite.contains(p)
 							&& p.getFallDistance() == 0) {
 						Location loc = e.getPlayer().getLocation();
@@ -114,6 +114,7 @@ public class EventsClass implements Listener {
 
 						}
 					}
+					
 				}
 
 				/*

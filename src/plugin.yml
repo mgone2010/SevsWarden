@@ -10,9 +10,15 @@ permissions:
    sw.immune:
      description: Bypass anti-cheat
      permission: sw.immune
+   sw.check.forcefield:
+     description: Donne acces a la commande /sw ff [joueur]
+     permission: sw.check.forcefield
+   sw.reset:
+     description: Donne acces a la commande /sw reset <joueur>
+     permission: sw.reset
      
 
 commands:
   sw:
     usage: /sw
-    description: 'summon a fake player'
+    description: Commande pricipale du plugin
